@@ -1,0 +1,28 @@
+div h3:hover{
+    border: solid lime;
+    width: fit-content;
+    transition: .5s;
+    color: lime;
+    cursor: pointer;
+}
+div:nth-of-type(2):hover h3{
+    border: solid black;
+    width: fit-content;
+    color: black;
+}
+div:nth-of-type(3):hover h3{
+    border: solid blue;
+    width: fit-content;
+    color: blue;
+    font-size: x-large;
+}
+div:nth-of-type(4):hover h3{
+    border: solid blueviolet;
+    width: fit-content;
+    color: blueviolet;
+}
+div:nth-of-type(5):hover h3{
+    border: solid aquamarine;
+    width: fit-content;
+    color: aquamarine;
+}
