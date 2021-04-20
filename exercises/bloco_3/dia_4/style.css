@@ -1,8 +1,16 @@
-body {
+*{
     text-align: center;
+    margin: auto;
+    width: 90%;
+    height: fit-content;
+    padding: 5px;
 }
 
 .nav-top li{
     display: inline-block;
     width: 150px;
+}
+
+.article p {
+    text-align: justify;
 }
