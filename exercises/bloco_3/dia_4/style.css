@@ -14,3 +14,17 @@
 .article p {
     text-align: justify;
 }
+.article h2 {
+    text-align: left;
+}
+
+.content-table {
+    border-collapse: collapse;   
+}
+
+.aside {
+    width: 20%;
+    padding-right: 1.5rem;
+    margin-right: 1.5rem;
+    float: right;
+}
