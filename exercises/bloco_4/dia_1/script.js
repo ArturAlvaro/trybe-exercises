@@ -80,3 +80,44 @@ else if (soma > 180 || soma < 180) {
 else {
     console.log('error');
 }
+
+// Escreva um programa que receba o nome de uma peça de xadrez e retorne os movimentos que ela faz.
+// Como desafio, faça o programa funcionar tanto se receber o nome de uma peça com letras maiúsculas quanto com letras minúsculas, sem aumentar a quantidade de condicionais.
+
+// Como dica, você pode pesquisar uma função que faz uma string ficar com todas as letras minúsculas (lower case) .
+
+// Se a peça passada for inválida, o programa deve retornar uma mensagem de erro.
+
+// Exemplo: bishop (bispo) -> diagonals (diagonais)
+
+let piece = 'rEI';
+let piece1 = piece.toLowerCase();
+
+switch (piece1) {
+    case 'peão':
+        console.log(piece1 + '-> para frente');
+        break;
+
+    case 'torre':
+        console.log(piece1 + '-> para horizontal/ vertical');
+        break;
+
+    case 'cavalo':
+        console.log(piece1 + '-> em L');
+        break;
+
+    case 'bispo':
+        console.log(piece1 + '-> somente diagonais');
+        break;
+
+    case 'rainha':
+            console.log(piece1 + '-> todas as direções');
+            break;
+
+    case 'rei':
+            console.log(piece1 + '-> todas as direções, somente uma casa por vez');
+            break;
+
+    default:
+        console.log('error: peça inválida')
+}
