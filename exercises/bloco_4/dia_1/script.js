@@ -154,3 +154,17 @@ else if (nota >= 50) {
 else if (nota < 50) {
     console.log('Estude mais, Nota F');
 }
+
+// Escreva um programa que defina três números em variáveis e retorne true se pelo menos uma das três for par. Caso contrário, ele retorna false .
+// Bonus: use somente um if .
+
+let number = 3;
+let number2 = 5;
+let number3 = 7;
+
+if (number % 2 == 0 || number2 % 2 == 0 || number3 % 2 == 0) {
+    console.log('habemus par');
+}
+else {
+    console.log('habemus impar');
+}
