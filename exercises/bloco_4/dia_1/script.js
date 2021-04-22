@@ -65,3 +65,18 @@ else {
 // Para os ângulos serem de um triângulo válido, a soma dos três devem ser 180 graus.
 
 // Um ângulo será considerado inválido se não tiver um valor positivo.
+
+let ang1 = 60;
+let ang2 = 60;
+let ang3 = 60;
+let soma = ang1 + ang2 + ang3;
+
+if (soma == 180) {
+    console.log('true');
+}
+else if (soma > 180 || soma < 180) {
+    console.log('false');
+}
+else {
+    console.log('error');
+}
