@@ -1,0 +1,30 @@
+*{
+    text-align: center;
+    margin: auto;
+    width: 90%;
+    height: fit-content;
+    padding: 5px;
+}
+
+.nav-top li{
+    display: inline-block;
+    width: 150px;
+}
+
+.article p {
+    text-align: justify;
+}
+.article h2 {
+    text-align: left;
+}
+
+.content-table {
+    border-collapse: collapse;   
+}
+
+.aside {
+    width: 20%;
+    padding-right: 1.5rem;
+    margin-right: 1.5rem;
+    float: right;
+}
