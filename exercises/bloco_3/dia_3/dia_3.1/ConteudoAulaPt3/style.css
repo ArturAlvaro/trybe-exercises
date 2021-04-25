@@ -74,3 +74,14 @@ img {
     height: auto;
     border-radius: 5%;
 }
+
+.section-10 ul li {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.section-10 ul li a:hover {
+    color: #fff;
+    background-color: #0c0c0c;
+    transition: .3s;
+}
