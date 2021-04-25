@@ -5,6 +5,7 @@ body {
     display: inline-block;
     margin: auto 7%;
     font-family: Raleway, sans-serif;
+    background-color: #F8E7C9;
 }
 
 h1{
@@ -54,8 +55,22 @@ li{
     margin: auto 15px;
 }
 
-table, .table-title {
-    text-align: left;
-    margin-left: 75%;
+table {
+    text-align: center;
     display: inline-block;
+}
+
+table, td, caption {
+    border: 1px ridge #0c0c0c;
+    border-collapse: collapse;
+}
+
+.section-3 {
+    display: inline-block;
+}
+
+img {
+    width: 70%;
+    height: auto;
+    border-radius: 5%;
 }
