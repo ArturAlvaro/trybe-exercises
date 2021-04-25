@@ -1,0 +1,33 @@
+body {
+    text-align: center;
+    display: inline-block;
+    margin: 0 10%;
+}
+
+a {
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.nav_menu {
+}
+
+.nav-links {
+    display: inline-block;
+}
+
+.nav-links.nav1 {
+    background-color: aqua;
+}
+
+.nav-links.nav2 {
+    background-color: chartreuse;
+}
+
+.nav-links.nav3 {
+    background-color: red;
+}
+
