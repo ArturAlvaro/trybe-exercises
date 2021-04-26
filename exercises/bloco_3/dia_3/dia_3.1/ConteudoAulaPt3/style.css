@@ -6,6 +6,7 @@ body {
     margin: auto 7%;
     font-family: Raleway, sans-serif;
     background-color: #F8E7C9;
+    background-image: linear-gradient(#F8E7C9, #FDF7ED, #FAEFDB);
 }
 
 h1{
