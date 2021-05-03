@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="paiDoPai">
+        <div id="pai">
+          <div id="primeiroFilho"></div>
+          <div id="elementoOndeVoceEsta">
+            <div id="primeiroFilhoDoFilho"></div>
+            <div id="segundoEUltimoFilhoDoFilho"></div>
+          </div>
+          Atenção!
+          <div id="terceiroFilho"></div>
+          <div id="quartoEUltimoFilho"></div>
+        </div>
+      </div>
+
+      <script>
+        //Crie um irmão para elementoOndeVoceEsta
+        let divFather = document.getElementById('elementoOndeVoceEsta');
+        let divBro = document.createElement('div');
+        divFather.appendChild(divBro);
+        divBro.innerHTML = 'tomate cru';
+
+        //Crie um filho para elementoOndeVoceEsta
+        let divSon = document.createElement('div');
+        divFather.appendChild(divSon);
+        divSon.innerHTML = 'ó o auê aí ó'
+      </script>
+</body>
+</html>
