@@ -83,9 +83,10 @@
         divLeftCont.className = 'left-content';
         divMainCont.appendChild(divLeftCont);
 
-        // 6 add tag div com classe right-content como filho da tag div criada no passo 2
+        // 6 add tag div com classe right-content como filho da tag div criada no passo 2 | centralizar a div
         let divRightCont = document.createElement('div');
         divRightCont.className = 'right-content';
+        divRightCont.style.marginRight = 'auto';
         divMainCont.appendChild(divRightCont);
 
         // 7 add img como src configurado com o valor: https://picsum.photos/200 e classe small-image. Dever ser filho do div criado no passo 5
@@ -118,6 +119,9 @@
         divMainCont.appendChild(tagH3A);
         divMainCont.appendChild(tagH3B);
         divMainCont.appendChild(tagH3C);
+
+        // remova a div criada
+        divMainCont.removeChild(divLeftCont);
 
     </script>
   </body>
