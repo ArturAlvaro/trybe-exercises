@@ -63,9 +63,10 @@
         titleH1.innerHTML = 'Exercício 5.2 - JavaScript DOM';
         document.body.appendChild(titleH1);
 
-        // 2 add tag div com classe main-content como filho da tag body
+        // 2 add tag div com classe main-content como filho da tag body | troque a cor de fundo para verde
         let divMainCont = document.createElement('div');
         divMainCont.className = 'main-content';
+        divMainCont.style.backgroundColor = 'green';
         document.body.appendChild(divMainCont);
 
         // 3 add tag div com class center-content como filho da tag div criada no passo 2
@@ -123,6 +124,9 @@
         // remova a div criada
         divMainCont.removeChild(divLeftCont);
 
+        // retire os dois ultimos itens da lista
+        listNonOrder.lastChild.remove();
+        listNonOrder.lastChild.remove();
     </script>
   </body>
 </html>
