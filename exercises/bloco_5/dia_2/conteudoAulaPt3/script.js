@@ -18,17 +18,41 @@ a cor do mesmo;
 
 Segue abaixo um exemplo do uso de event.target:
 */
-function firstTech(tech1) {
-    let tech1 = document.querySelectorAll
+
+
+function firstTech (event) {
+  let primeiraTech = document.querySelector('.tech');
+  primeiraTech.classList.remove('tech');
+  event.target.classList.add('tech');
+  input.value = '';
 }
 
+divUm.addEventListener('click', firstTech);
+divDois.addEventListener('click', firstTech);
+divTres.addEventListener('click', firstTech);
 
-function resetText(event) {
+input.addEventListener('input', (event) => {
+  let primeiraTech = document.querySelector('.tech');
+  primeiraTech.innerHTML = event.target.value;
+})
+
+myWebpage.addEventListener('dblclick', () => {
+  window.location.replace('https://blog.betrybe.com/');
+});
+
+myWebpage.addEventListener('mouseover', (event) => {
+  event.target.style.color = 'grey';
+})
+
+myWebpage.addEventListener('mouseout', (event) => {
+  event.target.style.color = 'unset';
+})
+// function resetText(event) {
   // O Event é passado como um parâmetro para a função.
-  event.target.innerText = 'Opção reiniciada';
+  // event.target.innerText = 'Opção reiniciada';
   // O event possui várias propriedades, porém a mais usada é o event.target,
   // que retorna o objeto que disparou o evento.
-}
+// }
 
 divUm.addEventListener('dblclick', resetText);
 // Não precisa passar o parâmetro dentro do addEventListener. O próprio
