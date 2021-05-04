@@ -93,7 +93,19 @@
         imgSrc.src = 'https://picsum.photos/200'
         divLeftCont.appendChild(imgSrc);
 
+        // 8 add lista não ordenada com valores de 1 a 10 por extenso como valores da lista. Deve ser filha da div do passo 6
+        let listNonOrder = document.createElement('ul');
+        let list = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
         
+        for (let index = 0; index < list.length; index += 1) {
+            let listItems = list[index];
+
+            let ListOfItems = document.createElement('li');
+            ListOfItems.innerHTML = listItems;
+
+            listNonOrder.appendChild(ListOfItems);
+        }        
+        divRightCont.appendChild(listNonOrder)
 
 
     </script>
