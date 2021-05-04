@@ -57,8 +57,9 @@
   </head>
   <body>
     <script>
-        // 1 add tag h1 com texto como filho da tag body
+        // 1 add tag h1 com texto como filho da tag body | add classe title na tag h1
         let titleH1 = document.createElement('h1');
+        titleH1.className = 'title';
         titleH1.innerHTML = 'Exercício 5.2 - JavaScript DOM';
         document.body.appendChild(titleH1);
 
@@ -107,10 +108,13 @@
         }        
         divRightCont.appendChild(listNonOrder);
 
-        // 9 add 3 tags h3, todas filhas de divMainCont
+        // 9 add 3 tags h3, todas filhas de divMainCont | add 3 classes description nas tags
         tagH3A = document.createElement('h3');
+        tagH3A.className = 'description';
         tagH3B = document.createElement('h3');
+        tagH3B.className = 'description';
         tagH3C = document.createElement('h3');
+        tagH3C.className = 'description';
         divMainCont.appendChild(tagH3A);
         divMainCont.appendChild(tagH3B);
         divMainCont.appendChild(tagH3C);
