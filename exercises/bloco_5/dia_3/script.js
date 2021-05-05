@@ -14,7 +14,7 @@ function createDaysOfTheWeek() {
   createDaysOfTheWeek();
 
 
-// dezDaysList deve ser <li> e com classe 'day'. Ex: <li class="da">3</li>
+// dezDaysList deve ser <li> e com classe 'day'. Ex: <li class="day">3</li>
 // dias 24, 25  e 31 são feriados e, além da classe 'day', devem conter também classe 'holiday'. 
 // Ex:<li class="day holiday">24</li>
 // dias 4, 11, 18 e 25 são sexta-feira e devem conter classe 'day' e classe 'friday'. Ex: <li class="day friday">4</li>
@@ -25,10 +25,27 @@ function dezDaysFunction() {
 
     for (let index = 0; index < dezDays.length; index += 1) {
         const dias = dezDays[index];
-        const daysListItems = document.createElement('li');
-        daysListItems.innerHTML = dias;
-
-        dezDaysList.appendChild(daysListItems);
+        const diasListItems = document.createElement('li');
+        if (dias === 24 || dias === 31) {
+          diasListItems.className = 'day holiday';
+          diasListItems.innerHTML = dias;
+          dezDaysList.appendChild(diasListItems);
+        }
+        else if (dias === 4 || dias === 11 || dias === 18) {
+          diasListItems.className = 'day friday';
+          diasListItems.innerHTML = dias;
+          dezDaysList.appendChild(diasListItems);
+        }
+        else if (dias === 25) {
+          diasListItems.className = 'day holiday friday';
+          diasListItems.innerHTML = dias;
+          dezDaysList.appendChild(diasListItems);
+        }
+        else {
+          diasListItems.className = 'day';
+          diasListItems.innerHTML = dias;
+          dezDaysList.appendChild(diasListItems);
+        }
     };
 };
 dezDaysFunction();
