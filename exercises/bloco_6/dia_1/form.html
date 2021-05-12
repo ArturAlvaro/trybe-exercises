@@ -8,46 +8,49 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="GET" enctype="multipart/form-data">
-        <fieldset>
-            <label for="name">Nome Completo:</label>
-            <input type="text" name="nome" id="name" maxlength="40" placeholder="Digite seu nome" required>
-            <label for="email">E-mail:</label>
-            <input type="email" name="email" id="email" required maxlength="50" placeholder="Digite de E-mail">
-            <br>
-            <label for="cpf">CPF:</label>
-            <input type="text" maxlength="11" id="cpf" required placeholder="Digite seu CPF">
-            <br>
-            <label for="address">Endereço:</label>
-            <input type="text" maxlength="200" id="address" required placeholder="Digite seu endereço">
-            <br>
-            <label for="city">Cidade:</label>
-            <input type="text" id="city" maxlength="28" required placeholder="Diga sua cidade">
-            <br>
-            <label for="state">Estado:</label>
-            <select name="state" id="state" required>
-            </select>
-            <br>
-            <label for="house">Residência:</label>
-            <input type="radio" id="house" required checked>Casa
-            <input type="radio" id="house">Apartamento
-        </fieldset>
-        <fieldset>
-            <textarea name="text-area" id="text-area" cols="30" maxlength="1000" required placeholder="Resuma seu currículo">
-            </textarea>
-            <br>
-            <label for="job">Cargo:</label>
-            <input type="text" id="job" maxlength="40" required placeholder="Último Cargo">
-            <br>
-            <label for="job-description">Descrição do Cargo:</label>
-            <input type="text" maxlength="500" placeholder="Descreva o último cargo" required>
-            <br>
-            <label for="date">Data de Início:</label>
-            <input type="date" name="date" id="input-data" class="data">
-
-        </fieldset>
-    </form>
-    <script src="script.js"></script>
+    <main>        
+        <form id="forms" action="" method="GET" enctype="multipart/form-data">
+            <fieldset>
+                <label for="name">Nome Completo:</label>
+                <input type="text" name="nome" id="name" maxlength="40" placeholder="Digite seu nome" required>
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" required maxlength="50" placeholder="Digite de E-mail">
+                <br>
+                <label for="cpf">CPF:</label>
+                <input type="text" maxlength="11" id="cpf" required placeholder="Digite seu CPF">
+                <br>
+                <label for="address">Endereço:</label>
+                <input type="text" maxlength="200" id="address" required placeholder="Digite seu endereço">
+                <br>
+                <label for="city">Cidade:</label>
+                <input type="text" id="city" maxlength="28" required placeholder="Diga sua cidade">
+                <br>
+                <label for="state">Estado:</label>
+                <select name="state" id="state" required>
+                </select>
+                <br>
+                <label for="house">Residência:</label>
+                <input type="radio" id="house" required checked>Casa
+                <input type="radio" id="house">Apartamento
+            </fieldset>
+            <fieldset>
+                <textarea name="text-area" id="text-area" cols="30" maxlength="1000" required placeholder="Resuma seu currículo">
+                </textarea>
+                <br>
+                <label for="job">Cargo:</label>
+                <input type="text" id="job" maxlength="40" required placeholder="Último Cargo">
+                <br>
+                <label for="job-description">Descrição do Cargo:</label>
+                <input type="text" maxlength="500" placeholder="Descreva o último cargo" required>
+                <br>
+                <label for="date">Data de Início:</label>
+                <input type="date" name="date" id="input-data" value="" class="data" required>
+                <br>
+                <button class="submit" type="submit">Enviar</button>
+                <button class="clear" type="button">Limpar</button>
+            </fieldset>
+        </form>
+        <script src="script.js"></script>
+    </main>
 </body>
 </html>
-<!-- date, month, number, step -->
