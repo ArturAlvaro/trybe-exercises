@@ -64,3 +64,11 @@ function feriados(btnName) {
   divPai.appendChild(btnHoliday);
 };
 feriados('Feriados');
+
+// Implemente uma função que add evento click que muda cor de fundo dos dias que possuem classe holiday
+// ao ser clicado novamente, retorna o valor de color inicial : rgb(238,238,238)
+
+function changeDayColor (event) {
+  document.querySelectorAll('.holiday')
+}
+changeDayColor()
