@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
@@ -24,7 +25,8 @@
             <input type="text" id="city" maxlength="28" required placeholder="Diga sua cidade">
             <br>
             <label for="state">Estado:</label>
-            <select name="state" id="state"></select>
+            <select name="state" id="state" required>
+            </select>
             <br>
             <label for="house">Residência:</label>
             <input type="radio" id="house" required checked>Casa
@@ -33,5 +35,6 @@
 
         </fieldset>
     </form>
+    <script src="script.js"></script>
 </body>
 </html>
