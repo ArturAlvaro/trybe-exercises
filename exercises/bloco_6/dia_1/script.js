@@ -1,4 +1,5 @@
 const state = document.getElementById('state');
+let date = document.querySelector('.data');
 
 function whatState() {
     const arrayEstados = ['AC', 'AL', 'AP', 'AM', 'BA', 'CE', 'ES', 'GO', 'MA', 'MT', 'MS', 'MG', 'PA', 'PB', 'PR', 'PE', 'PI', 'RJ', 'RN', 'RS', 'RO', 'RR', 'SC', 'SP', 'SE', 'TO', 'DF'];
@@ -7,6 +8,6 @@ function whatState() {
         stateOption = document.createElement('option');
         stateOption.innerHTML = stateList;
         state.appendChild(stateOption);
-    }    
+    }
 }
 whatState();

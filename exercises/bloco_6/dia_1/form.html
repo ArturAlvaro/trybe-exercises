@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="">
+    <form action="" method="GET" enctype="multipart/form-data">
         <fieldset>
             <label for="name">Nome Completo:</label>
             <input type="text" name="nome" id="name" maxlength="40" placeholder="Digite seu nome" required>
@@ -31,10 +31,23 @@
             <label for="house">Residência:</label>
             <input type="radio" id="house" required checked>Casa
             <input type="radio" id="house">Apartamento
-
+        </fieldset>
+        <fieldset>
+            <textarea name="text-area" id="text-area" cols="30" maxlength="1000" required placeholder="Resuma seu currículo">
+            </textarea>
+            <br>
+            <label for="job">Cargo:</label>
+            <input type="text" id="job" maxlength="40" required placeholder="Último Cargo">
+            <br>
+            <label for="job-description">Descrição do Cargo:</label>
+            <input type="text" maxlength="500" placeholder="Descreva o último cargo" required>
+            <br>
+            <label for="date">Data de Início:</label>
+            <input type="date" name="date" id="input-data" class="data">
 
         </fieldset>
     </form>
     <script src="script.js"></script>
 </body>
 </html>
+<!-- date, month, number, step -->
