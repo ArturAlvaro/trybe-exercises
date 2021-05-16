@@ -14,7 +14,7 @@ function whatState() {
 }
 whatState();
 
-function stopAction() {
+function stopAction(event) {
     event.preventDefault();
 }
 
