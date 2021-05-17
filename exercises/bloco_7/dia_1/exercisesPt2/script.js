@@ -1,16 +1,16 @@
-// // Crie uma função que receba um número e retorne seu fatorial;
+// Crie uma função que receba um número e retorne seu fatorial;
 
-// const factorial = number => {
-//     for (let index = number - 1; index >= 1; index -= 1) {
-//         number *= index;
-//     }
-//     return number;
-// }
-// console.log(factorial(4));
+const factorial = number => {
+    for (let index = number - 1; index >= 1; index -= 1) {
+        number *= index;
+    }
+    return number;
+}
+console.log(factorial(4));
 
-// // em uma linha com ternary operator
-// const factorialize = number => number > 1 ? number * factorialize(number-1) : 1;
-// console.log(factorialize(4))
+// em uma linha com ternary operator
+const factorialize = number => number > 1 ? number * factorialize(number-1) : 1;
+console.log(factorialize(4))
 
 // Crie uma função que receba uma frase e retorne qual a maior palavra;
 
