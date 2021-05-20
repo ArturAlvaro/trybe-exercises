@@ -79,3 +79,9 @@ const totalStudents = (allLessons) => {
   return `O número total de estudantes é: ${stdnts1 + stdnts2 + stdnts3}!`;
 };
 console.log(totalStudents(allLessons));
+
+// Crie uma função que obtenha o valor da chave de acordo com a sua posição no objeto. Por exemplo:
+
+const getValueByNumber = (obj, number) => Object.values(obj)[number];
+console.log(getValueByNumber(lesson2, 0));
+// Output: 'Matématica';
