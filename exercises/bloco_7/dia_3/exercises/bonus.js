@@ -14,12 +14,11 @@ function getChange(payable, paid) {
   let results = 0;
 
   // escreva seu código aqui...
-  if (remaining === 0) {
-    return change;
-  }
-  for (let index = 0; index < coins.length; index += 1) {
+  if (paid < payable) throw new Error('paid value is not enough');
+
+  for (let index = 0; index < length; index += 1) {
     if (coins[index] <= remaining) {
-      //remaining = 85
+      //remaining = 114
       results += coins[index];
       if (results <= remaining) {
         change.push(coins[index]);
@@ -30,22 +29,18 @@ function getChange(payable, paid) {
   }
   return change;
 }
-console.log(getChange(215, 300));
+console.log(getChange(12, 400));
 
 // let expected = [];
-expected = [50, 20, 10, 5];
+// expected = [50, 20, 10, 5];
+// expected = [100, 10, 2, 2];
+expected = [200, 100, 50, 20, 10, 5, 2, 1];
 // let result = getChange(1, 1); // no change/coins just an empty array
-result = getChange(215, 300); // expect an array containing [50, 20, 10, 5]
+// result = getChange(215, 300); // expect an array containing [50, 20, 10, 5]
+// result = getChange(486, 600); // expect an array containing [100, 10, 2, 2]
+result = getChange(12, 400); // expect an array containing [200, 100, 50, 20, 10, 5, 2, 1]
 assert.deepStrictEqual(result, expected);
 
-// result = getChange(486, 600); // expect an array containing [100, 10, 2, 2]
-// expected = [100, 10, 2, 2];
-// assert.deepStrictEqual(result, expected);
-
-// result = getChange(12, 400); // expect an array containing [200, 100, 50, 20, 10, 5, 2, 1]
-// expected = [200, 100, 50, 20, 10, 5, 2, 1];
-// assert.deepStrictEqual(result, expected);
-
-// assert.throws(() => {
-//   getChange(100, 10);
-// }, /^Error: paid value is not enough$/);
+assert.throws(() => {
+  getChange(100, 10);
+}, /^Error: paid value is not enough$/);
