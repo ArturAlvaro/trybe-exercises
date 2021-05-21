@@ -1,5 +1,4 @@
 const assert = require('assert');
-const { workerData } = require('worker_threads');
 // escreva a função wordLengths aqui
 
 const words = ['sun', 'potato', 'roundabout', 'pizza'];
