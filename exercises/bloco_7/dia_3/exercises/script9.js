@@ -13,7 +13,3 @@ const findTheNeedle = (value, string) => {
 let expected = 1;
 let output = findTheNeedle(words, 'shelf');
 assert.strictEqual(output, expected);
-
-// expected = -1;
-// output = findTheNeedle(words, 'plat');
-// assert.strictEqual(output, expected);
