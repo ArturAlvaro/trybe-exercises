@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+        // 1 add tag h1 com texto como filho da tag body | add classe title na tag h1
+        let titleH1 = document.createElement('h1');
+        titleH1.className = 'title';
+        titleH1.innerHTML = 'Exercício 5.2 - JavaScript DOM';
+        document.body.appendChild(titleH1);
+
+        // 2 add tag div com classe main-content como filho da tag body | troque a cor de fundo para verde
+        let divMainCont = document.createElement('div');
+        divMainCont.className = 'main-content';
+        divMainCont.style.backgroundColor = 'green';
+        document.body.appendChild(divMainCont);
+
+        // 3 add tag div com class center-content como filho da tag div criada no passo 2
+        let divCentCont = document.createElement('div');
+        divCentCont.className = 'center-content';
+        divMainCont.appendChild(divCentCont);
+
+        // 4 add tag p como filho da div criada no passo 3 e coloque algum texto
+        let paragraph = document.createElement('p');
+        paragraph.innerHTML = 'Mussum Ipsum, cacilds vidis litro abertis. Quem num gosta di mé, boa gentis num é. In elementis mé pra quem é amistosis quis leo. Aenean aliquam molestie leo, vitae iaculis nisl.';
+        divCentCont.appendChild(paragraph);
+
+        // 5 add tag div com classe left-content como filho da tag div criada no passo 2
+        let divLeftCont = document.createElement('div');
+        divLeftCont.className = 'left-content';
+        divMainCont.appendChild(divLeftCont);
+
+        // 6 add tag div com classe right-content como filho da tag div criada no passo 2 | centralizar a div
+        let divRightCont = document.createElement('div');
+        divRightCont.className = 'right-content';
+        divRightCont.style.marginRight = 'auto';
+        divMainCont.appendChild(divRightCont);
+
+        // 7 add img como src configurado com o valor: https://picsum.photos/200 e classe small-image. Dever ser filho do div criado no passo 5
+        let imgSrc = document.createElement('img');
+        imgSrc.className = 'small-image';
+        imgSrc.src = 'https://picsum.photos/200'
+        divLeftCont.appendChild(imgSrc);
+
+        // 8 add lista não ordenada com valores de 1 a 10 por extenso como valores da lista. Deve ser filha da div do passo 6
+        let listNonOrder = document.createElement('ul');
+        let list = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
+        
+        for (let index = 0; index < list.length; index += 1) {
+            let listItems = list[index];
+
+            let ListOfItems = document.createElement('li');
+            ListOfItems.innerHTML = listItems;
+
+            listNonOrder.appendChild(ListOfItems);
+        }        
+        divRightCont.appendChild(listNonOrder);
+
+        // 9 add 3 tags h3, todas filhas de divMainCont | add 3 classes description nas tags
+        tagH3A = document.createElement('h3');
+        tagH3A.className = 'description';
+        tagH3B = document.createElement('h3');
+        tagH3B.className = 'description';
+        tagH3C = document.createElement('h3');
+        tagH3C.className = 'description';
+        divMainCont.appendChild(tagH3A);
+        divMainCont.appendChild(tagH3B);
+        divMainCont.appendChild(tagH3C);
+
+        // remova a div criada
+        divMainCont.removeChild(divLeftCont);
+
+        // retire os dois ultimos itens da lista
+        listNonOrder.lastChild.remove();
+        listNonOrder.lastChild.remove();
+    </script>
+  </body>
+</html>

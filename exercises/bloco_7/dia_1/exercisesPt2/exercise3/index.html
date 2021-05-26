@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Clique no botão:</label>
+    <button id="btnClick">Click!</button>
+    <label id="count"></label>
+</body>
+    <script>
+        let clickCount = 0;
+        btnClick = document.getElementById('btnClick');
+        count = document.getElementById('count');
+
+        btnClick.addEventListener('click', () => count.innerHTML = clickCount += 1);
+    </script>
+</html>
