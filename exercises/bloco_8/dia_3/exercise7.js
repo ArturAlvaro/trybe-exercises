@@ -79,3 +79,7 @@ function authorWith3DotsOnName() {
 }
 console.log(authorWith3DotsOnName());
 // assert.deepStrictEqual(authorWith3DotsOnName(), expectedResult);
+
+const numbers = [32, 15, 3, 2, -5, 56, 10];
+const sumNumbers = numbers.reduce((result, numbers) => result + numbers);
+console.log(sumNumbers);
