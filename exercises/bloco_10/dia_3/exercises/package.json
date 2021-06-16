@@ -1,8 +1,8 @@
 {
-  "name": "conteudo-aula",
+  "name": "dia_3",
   "version": "1.0.0",
   "description": "",
-  "main": "mock.js",
+  "main": "ex1.js",
   "scripts": {
     "test": "jest --watchAll"
   },
