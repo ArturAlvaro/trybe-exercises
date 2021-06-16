@@ -23,11 +23,26 @@ const getAnimal = (name) => {
   // Adicione o código aqui
   return findAnimalByName(name).then((animal) => animal);
 };
+
+const findAnimalByAge = (age) => {
+  return new Promise((resolve, reject) => {
+    const animalAge = Animals.filter((animal) => animal.age === age);
+    if (animalAge.length !== 0) {
+      return resolve(animalAge);
+    }
+    const messageError = 'Nenhum animal encontrado!';
+    return reject(messageError);
+  });
+};
+
+const getAnimalByAge = (age) => {
+  return findAnimalByAge(age).then((animal) => animal);
+};
 // ---------------------
 
 describe('Testando promise - findAnimalByName', () => {
   describe('Quando existe o animal com o nome procurado', () => {
-    test('Retorne o objeto do animal', async () => {
+    it('Retorne o objeto do animal', async () => {
       expect.assertions(1);
       return getAnimal('Dorminhoco').then((animal) => {
         expect(animal).toEqual({ name: 'Dorminhoco', age: 1, type: 'Dog' });
@@ -36,10 +51,29 @@ describe('Testando promise - findAnimalByName', () => {
   });
 
   describe('Quando não existe o animal com o nome procurado', () => {
-    test('Retorna um erro', async () => {
+    it('Retorna um erro', async () => {
       expect.assertions(1);
       return getAnimal('Bob').catch((error) =>
         expect(error).toEqual('Nenhum animal com esse nome!'),
+      );
+    });
+  });
+});
+
+describe('Testando promise - findAnimalsByAge', () => {
+  describe('Quando existe o animal com a idade procurada', () => {
+    it('Retorna o objeto do animal', () => {
+      expect.assertions(1);
+      return expect(getAnimalByAge(2)).resolves.toEqual([
+        { name: 'Soneca', age: 2, type: 'Dog' },
+      ]);
+    });
+  });
+  describe('Quando não existe o animal com o nome procurado', () => {
+    test('Retorna um erro', () => {
+      expect.assertions(1);
+      return expect(getAnimalByAge(3)).rejects.toBe(
+        'Nenhum animal encontrado!',
       );
     });
   });
