@@ -13,7 +13,7 @@ class App extends React.Component {
 
   handleClick = () => {
     this.setState((estadoAnterior, _props) => ({
-      numeroDeCliques: estadoAnterior.numeroDeCliques + 1
+      numeroDeCliques: estadoAnterior.numeroDeCliques + 1,
     }))
   }
 
