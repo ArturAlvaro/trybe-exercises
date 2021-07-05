@@ -15,23 +15,10 @@ code {
     monospace;
 }
 
-h1 {
-  text-align: center;
-}
-
-label {
-  font-weight: 500;
-}
-* {
-  padding: 8px;
-}
-
-.formCompl {
+.form-all {
   display: flex;
-  flex-flow: column nowrap;
-  align-items: flex-start;
 }
 
-.formCompl .labelCompl, .selectRegiao {
-  display: flex;
+.form-control {
+  resize: none;
 }

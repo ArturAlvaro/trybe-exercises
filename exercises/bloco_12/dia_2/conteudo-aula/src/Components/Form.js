@@ -45,16 +45,16 @@ class Form extends React.Component {
         </h1>
         <fieldset>
           <form className='top-form'>
-            <EstadoFavorito
-              value={estadoFavorito}
+            <FormFavorito
+              value={(idade, filmeFavorito, numeroDaSorte)}
               handleChange={this.handleChange}
             />
           </form>
         </fieldset>
         <fieldset>
           <form className='mid-form'>
-            <FormFavorito
-              value={(idade, filmeFavorito, numeroDaSorte)}
+            <EstadoFavorito
+              value={estadoFavorito}
               handleChange={this.handleChange}
             />
           </form>
@@ -67,9 +67,14 @@ class Form extends React.Component {
             />
           </form>
           <label>
-          Abrir arquivo:
-          <input type='file' ref={this.fileInput} />
-        </label>
+            Abrir arquivo:
+            <input
+              type='file'
+              ref={this.fileInput}
+              className='form-control-file'
+              id='exampleFormControlFile1'
+            />
+          </label>
         </fieldset>
       </section>
     );

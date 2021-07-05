@@ -6,7 +6,13 @@ class EstadoFavorito extends React.Component {
     return (
       <label>
         Diga qual o seu Estado favorito! De React ou do Brasil, você decide!
-        <textarea name='estadoFavorito' value={value} onChange={handleChange} />
+        <textarea
+          className='form-control'
+          id='exampleFormControlTextarea1'
+          name='estadoFavorito'
+          value={value}
+          onChange={handleChange}
+        />
       </label>
     );
   }
