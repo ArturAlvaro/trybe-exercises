@@ -3,6 +3,7 @@ import { render } from '@testing-library/react';
 import App from './App';
 
 afterEach(() => jest.clearAllMocks());
+
 it("fetch joke", async () => {
   const joke = {
     id: "7h3oGtr0fxc",
