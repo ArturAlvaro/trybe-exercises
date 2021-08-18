@@ -3,12 +3,13 @@ import Button from '../components/Button';
 import InputForm from '../components/InputForm';
 import { verifyEmail } from '../helpers';
 import MyContext from '../provider/Context';
+import './pages.css';
 
 function HomePage() {
   const { user, setUser, email, setEmail } = useContext(MyContext);
   return (
-    <main>
-      <form>
+    <main className="login-page">
+      <form className="login-form">
         <InputForm
           labelText="Nome"
           type="text"
