@@ -1,2 +1,0 @@
--- query com lcase
-SELECT LCASE('RUA NORTE 1500, SÃO PAULO, BRASIL');
