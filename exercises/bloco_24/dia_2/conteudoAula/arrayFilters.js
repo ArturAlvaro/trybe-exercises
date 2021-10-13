@@ -1,7 +1,7 @@
 db.recipes.updateOne(
   { title: "Panqueca Simples" },
   {
-set : {
+    $set : {
       "ingredients.$[elemento].name": "Farinha Integral", // altera o valor para "Farinha Integral..."
     },
   },
@@ -13,7 +13,7 @@ set : {
 db.recipes.updateOne(
   { title: "Panqueca Simples" },
   {
-set : {
+    $set : {
       "ingredients.$[elemento].unit": "xícara",
     },
   },
@@ -25,7 +25,7 @@ set : {
 db.recipes.updateMany( // Passamos de updateOne para updateMany.
   {}, // Retiramos a restrição do título.
   {
-set : {
+    $set : {
       "ingredients.$[elemento].unit": "xícara", // Setamos `unit` como "xícara",
       "ingredients.$[elemento].name": "Farinha Integral", // `name` como "Farinha Integral".
     },

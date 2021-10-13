@@ -24,9 +24,9 @@ use("sales");
 db.inventory.updateOne(
   { _id: 2 },
   {
-addToSet: {
+    $addToSet: {
       tags: {
-each: ["camera", "electronics", "accessories"],
+        $each: ["camera", "electronics", "accessories"],
       },
     },
   },
