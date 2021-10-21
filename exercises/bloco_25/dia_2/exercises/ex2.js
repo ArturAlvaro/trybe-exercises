@@ -17,3 +17,17 @@ const checkNumber = (num1, num2, num3) => {
     resolve(result);
   });
 };
+
+const randomNumber = () => {
+  return Math.floor(Math.random() * 11);
+};
+
+const arr = [];
+
+for(let i = 0; i < 3; i += 1) {
+  arr.push(randomNumber());
+};
+
+checkNumber(...arr)
+  .then(resolve => console.log(resolve))
+  .catch(err => console.error(err));
