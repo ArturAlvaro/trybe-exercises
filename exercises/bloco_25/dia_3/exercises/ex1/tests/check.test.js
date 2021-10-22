@@ -4,9 +4,9 @@ const checkNumber = require("../script");
 describe("Testa a função checkNumber: ", () => {
   describe("Quando o parâmetro não é do tipo válido", () => {
     it("A resposta deve ser: 'o valor deve ser um número'", () => {
-      const resposta = checkNumber('string');
+      const resposta = checkNumber("string");
 
-      expect(resposta).to.be.equals('o valor deve ser um número');
+      expect(resposta).to.be.equals("o valor deve ser um número");
     });
   });
 
