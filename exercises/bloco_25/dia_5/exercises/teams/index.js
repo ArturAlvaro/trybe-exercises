@@ -1,5 +1,5 @@
 const express = require('express');
-const router = require('./routers');
+const router = require('./router/routers');
 const errorMid = require('./middlewares/errorMiddleware');
 
 const app = express();

@@ -2,7 +2,7 @@ const router = require('express').Router();
 const fs = require('fs/promises');
 const rescue = require('express-rescue');
 
-const { validCountry, validInitials, validName } = require('./middlewares/authMiddleware');
+const { validCountry, validInitials, validName } = require('../middlewares/authMiddleware');
 
 router.get('/', [
   rescue(async (_req, res) => {
