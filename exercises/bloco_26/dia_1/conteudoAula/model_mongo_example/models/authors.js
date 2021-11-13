@@ -1,4 +1,5 @@
 const connection = require('./connection');
+const { ObjectId } = require('mongodb');
 
 // cria uma string com nome completo
 const getNewAuthor = (authorData) => {
@@ -39,14 +40,16 @@ const getAll = async () => {
 
 // buscar autor por id
 const findById = async (id) => {
-  const query =
-    'SELECT id, first_name, middle_name, last_name FROM model_example.authors WHERE id=?';
-  
-  const [authorData] = await connection.execute(query, [id]);
+  if (!ObjectId.isValid(id)) {
+    return null;
+  }
 
-  if (authorData.length === 0) return null;
+  const authorData = await connection()
+    .then((db) => db.collection('authors').findOne(new ObjectId(id)));
 
-  const { firstName, middleName, lastName} = serialize(authorData[0]);
+  if (!authorData) return null;
+
+  const { firstName, middleName, lastName } = authorData;
 
   return getNewAuthor({
     id,
