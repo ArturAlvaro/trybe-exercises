@@ -4,7 +4,13 @@ const API_TOKEN = '2d635ea9b637ea0f27d58985cc161d64';
 
 const headers = { Authorization: API_TOKEN };
 
-axios.get('https://postman-echo.com/get?param1=teste', { headers })
+const body = {
+  name: 'Tryber',
+  email: 'tryber@betrybe.com',
+  password: 'Tr1b3r',
+};
+
+axios.post('https://postman-echo.com/post?param1=teste', body, { headers })
   .then((response) => {
     return response.data;
   })
