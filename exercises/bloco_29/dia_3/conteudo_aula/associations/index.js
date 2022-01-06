@@ -7,7 +7,8 @@ const config = require('./config/config');
 const app = express();
 app.use(bodyParser.json());
 
-const sequelize = new Sequelize(config.development);
+const sequelize = new Sequelize(
+  process.env.NODE_ENV === 'test' ? config.test : config.development);
 
 app.get('/employees', async (_req, res) => {
   try {
@@ -97,7 +98,10 @@ app.post('/employees', async (req, res) => {
     // Com isso, podemos finalizar a transação usando a função `commit`.
     await t.commit();
 
-    return res.status(201).json({ message: 'Cadastrado com sucesso' });
+    return res.status(201).json({
+      id: employee.id,
+      message: 'Cadastrado com sucesso'
+    });
     // caso não retorne nada, será uma unmanaged transaction
   } catch (e) {
     // Se entrou nesse bloco é porque alguma operação falhou.

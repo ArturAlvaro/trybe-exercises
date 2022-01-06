@@ -9,7 +9,7 @@ module.exports = {
   test: {
     username: 'root',
     password: '12345678',
-    database: 'associations',
+    database: 'orm_assoc_test_db',
     host: '127.0.0.1',
     dialect: 'mysql',
   },
