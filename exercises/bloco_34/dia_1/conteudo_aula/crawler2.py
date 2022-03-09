@@ -12,8 +12,8 @@ while next_page_url:
     # Imprime os produtos de uma determinada página
     for product in selector.css(".product_pod"):
         title = product.css("h3 a::attr(title)").get()
-        price = product.css(".price_color::text").get()
-        # print(title, price)
+        price = product.css(".price_color::text").re(r"£\d+\.\d{2}")
+
         # Busca o detalhe de um produto
         detail_href = product.css("h3 a::attr(href)").get()
         detail_page_url = URL_BASE + detail_href
@@ -24,6 +24,9 @@ while next_page_url:
 
         # Extrai a descrição do produto
         description = detail_selector.css("#product_description ~ p::text").get()
+        suffix = "...more"
+        if description.endswith(suffix):
+            description = description[:-len(suffix)]
         print(description)
     # Descobre qual é a próxima página
     next_page_url = selector.css(".next a::attr(href)").get()
